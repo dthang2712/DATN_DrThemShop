@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9480909C-34BA-44E4-8A12-48E6C0F24371}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DrThemShopAdmin</RootNamespace>
+    <AssemblyName>DrThemShopAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>admin.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SecurityLibrary">
+      <HintPath>..\Lib\SecurityLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParent.Designer.cs">
+      <DependentUpon>FrmParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FrmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmOrder.Designer.cs">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmProduct.Designer.cs">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmReasonCancle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmReasonCancle.Designer.cs">
+      <DependentUpon>FrmReasonCancle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmStartUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmStartUp.Designer.cs">
+      <DependentUpon>FrmStartUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </Compile>
+    <None Include="Resources\92b6ca43f3e5ca6a0bb40ed58ac26508.jpg" />
+    <None Include="Resources\icons8-cloud-cross-80.png" />
+    <None Include="Resources\icons8-news-20.png" />
+    <None Include="Resources\icons8-password-20.png" />
+    <None Include="Resources\icons8-down-20.png" />
+    <None Include="Resources\icons8-up-20.png" />
+    <None Include="Resources\icons8-printout-201.png" />
+    <None Include="Resources\icons8-delete-20.png" />
+    <None Include="Resources\icons8-update-20.png" />
+    <None Include="Resources\icons8-add-20.png" />
+    <None Include="Resources\icons8-refresh-20.png" />
+    <None Include="Resources\icons8-printout-20.png" />
+    <None Include="Resources\icons8-document-80.png" />
+    <None Include="Resources\icons8-mastercard-80.png" />
+    <None Include="Resources\icons8-bank-80.png" />
+    <None Include="Resources\icons8-money-80.png" />
+    <None Include="Resources\icons8-change-user-80.png" />
+    <None Include="Resources\icons8-group-80.png" />
+    <None Include="Resources\icons8-merchant-account-80.png" />
+    <None Include="Resources\icons8-paycheque-20.png" />
+    <None Include="Resources\icons8-debt-20.png" />
+    <None Include="Resources\icons8-accounting-20.png" />
+    <None Include="Resources\icons8-payment-20.png" />
+    <None Include="Resources\icons8-cash-register-20.png" />
+    <None Include="Resources\icons8-stock-20.png" />
+    <None Include="Resources\icons8-document-20.png" />
+    <None Include="Resources\icons8-mastercard-20.png" />
+    <None Include="Resources\icons8-bank-20.png" />
+    <None Include="Resources\icons8-money-20.png" />
+    <None Include="Resources\icons8-change-user-20.png" />
+    <None Include="Resources\icons8-group-20.png" />
+    <None Include="Resources\icons8-merchant-account-20.png" />
+    <None Include="Resources\icons8-copyright-20.png" />
+    <None Include="Resources\icons8-shutdown-20.png" />
+    <None Include="Resources\icons8-info-20.png" />
+    <None Include="Resources\icons8-user-20.png" />
+    <None Include="Resources\icons8-home-20.png" />
+    <None Include="Resources\icons8-restore-window-20.png" />
+    <None Include="Resources\icons8-report-20.png" />
+    <None Include="Resources\icons8-book-20.png" />
+    <None Include="Resources\icons8-combo-chart-20.png" />
+    <None Include="Resources\icons8-wallet-20.png" />
+    <None Include="Resources\icons8-detail-20.png" />
+    <None Include="Resources\icons8-user-groups-20.png" />
+    <None Include="Resources\icons8-module-20.png" />
+    <EmbeddedResource Include="FrmParent.resx">
+      <DependentUpon>FrmParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\FrmOrder.resx">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmProduct.resx">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmReasonCancle.resx">
+      <DependentUpon>FrmReasonCancle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmStartUp.resx">
+      <DependentUpon>FrmStartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <Content Include="admin.ico" />
+    <Content Include="Config\DrThemShopAdmin.log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Config\DrThemShopAdmin.spring.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+    <None Include="Resources\Refresh_File.png" />
+    <None Include="Resources\icons8-login-20.png" />
+    <None Include="Resources\icons8-close-20.png" />
+    <None Include="Resources\icons8-save-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DrThemShop.WinLibrary\DrThemShop.WinLibrary.csproj">
+      <Project>{b5c2c738-2822-49cd-aaa3-0b8e9570eab3}</Project>
+      <Name>DrThemShop.WinLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
